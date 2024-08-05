@@ -10,6 +10,7 @@ function isNumber(str) {
 
 // Enable CORS for all routes
 app.use(cors());
+app.options('*', cors()); // Preflight request handler
 
 // Scraping endpoint
 app.get('/api/scrape', async (req, res) => {
